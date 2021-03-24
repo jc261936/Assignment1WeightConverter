@@ -5,7 +5,9 @@ public enum Weight {
     KILOGRAMS,
     OUNCES,
     STONE,
-    TONNES;
+    TONNES,
+    POUND;
 
-    // fromString already exists, it's called Weight.valueof(String)
 }
+    // fromString already exists, it's called Weight.valueof(String)
+

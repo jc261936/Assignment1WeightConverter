@@ -19,13 +19,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/convert_from"
+        android:id="@+id/text_From"
         android:autofillHints="@string/insert_number"
         android:ems="6"
         android:hint="@string/insert_number"
         android:inputType="number"
-        android:textSize="20sp"
-        android:layout_below="@+id/convert_from"
-        />
+        android:textSize="20sp" />
 
     <!-- This spinner controls what the first number is being converted to. -->
     <Spinner
@@ -38,16 +38,17 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/convert_to"
+        android:id="@+id/text_To"
         android:clickable="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
         android:cursorVisible="false"
         android:ems="6"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:textSize="20sp"
-        android:importantForAutofill="no"
-        tools:ignore="LabelFor"
-        android:layout_below="@+id/convert_to"/>
+        tools:ignore="LabelFor" />
 
     <!--Press button to make the program convert first Text to chosen Unit Conversion-->
     <Button
@@ -55,6 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:onClick="convert"
         android:text="@string/convert"
         android:textSize="30sp" />
 
