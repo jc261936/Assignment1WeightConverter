@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         String fromString = (String) fromSpinner.getSelectedItem();
         String toString = (String) toSpinner.getSelectedItem();
-        double input = Double.valueOf(fromText.getText().toString());
+        double input = Double.parseDouble(fromText.getText().toString());
 
-        Weight fromUnit = Weight.valueOf(fromString);
-        Weight toUnit = Weight.valueOf(toString);
+        Weight fromUnit = Weight.valueOf(fromString.toUpperCase());
+        Weight toUnit = Weight.valueOf(toString.toUpperCase());
 
         Converter converter = new Converter(fromUnit, toUnit);
         double result = converter.convert(input);
