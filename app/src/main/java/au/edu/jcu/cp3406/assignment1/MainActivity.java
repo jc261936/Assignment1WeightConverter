@@ -1,8 +1,10 @@
 package au.edu.jcu.cp3406.assignment1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -26,6 +28,20 @@ public class MainActivity extends AppCompatActivity {
 // Apply the adapter to the spinner
         fromSpinner.setAdapter(adapter);
         toSpinner.setAdapter(adapter);
+
+        Button sButton = findViewById(R.id.sButton);
+        sButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingsClicked();
+
+            }
+        });
+    }
+
+    private void settingsClicked() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
     }
 
     //Getting the Button to work and to use the math we made in Converter.java
@@ -50,4 +66,5 @@ public class MainActivity extends AppCompatActivity {
         double result = converter.convert(input);
         toText.setText(String.valueOf(result));
     }
+
 }

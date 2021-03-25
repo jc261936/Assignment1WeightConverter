@@ -65,6 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/settings"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:id="@+id/sButton"
+ />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
