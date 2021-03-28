@@ -13,7 +13,7 @@ public class Converter {
             } else if (to == Weight.STONE) {
                 multiplier = 0.000157473;
             } else if (to == Weight.TONNES) {
-                multiplier = 1.0000010787e-6;
+                multiplier = 0.000001 ;
             } else if (to == Weight.POUND) {
                 multiplier = 0.00220462;
             }
@@ -39,7 +39,7 @@ public class Converter {
             } else if (to == Weight.STONE) {
                 multiplier = 0.00446429;
             } else if (to == Weight.TONNES) {
-                multiplier = 2.835e-5;
+                multiplier = 0.0000283495;
             }
         } else if (from == Weight.STONE) {
             if (to == Weight.GRAMS) {
